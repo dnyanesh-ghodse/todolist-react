@@ -1,0 +1,23 @@
+.item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: ivory;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px 30px;
+     background-color: rgba(0, 221, 255, 0.781);
+
+}
+
+.item i{
+    margin-left: 50px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 60px;
+}
+
+li{
+    list-style: none;
+}
