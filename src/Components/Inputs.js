@@ -1,11 +1,16 @@
-// import React from 'react'
+import React from 'react'
 
-// function Inputs(props) {
-//     return (
-//       <div>
+function Inputs(props) {
+    return (
+      <>
+        <input
+        type="text"
+        placeholder="Add An Item"
+        onChange={props.change}
+        value={props.v}
+      ></input>
+      </>
+    );
+}
 
-//       </div>
-//     );
-// }
-
-// export default Inputs
+export default Inputs
