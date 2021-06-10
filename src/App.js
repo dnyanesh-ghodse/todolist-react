@@ -1,12 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import "./App.css";
 import Inputs from './Components/Inputs';
 import Items from './Components/Items';
 
+const getLocal = () => {
+  let list = localStorage.getItem('list');
+  if(list) {
+    return JSON.parse(localStorage.getItem('list'))
+  } else {
+    return [];
+  }
+}
+
 function App() {
 
   const [inputs, setInputs] = useState("");
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(getLocal());
 
   const handleChange = (e) => {
     const val = e.target.value;
@@ -29,6 +38,11 @@ function App() {
       })
     })
   }
+
+  useEffect(() => {
+      localStorage.setItem('list',JSON.stringify(items))
+  }, [items])
+
 
   return (
     <div className="container">
